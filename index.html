@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Notes</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script> <!-- jsPDF CDN -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        .container {
+            text-align: center;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            width: 90%;
+            max-width: 600px;
+        }
+
+        /* Header section */
+        h1 {
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+
+        /* Social buttons */
+        .social-buttons {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .social-button {
+            background-color: #007bff;
+            color: white;
+            padding: 15px 20px;
+            margin: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            text-decoration: none;
+            font-size: 18px;
+        }
+
+        .social-button.active {
+            background-color: #0056b3;
+            color: white;
+            font-weight: bold;
+        }
+
+        /* Section styles */
+        .section {
+            display: none;
+            margin-top: 20px;
+            text-align: left;
+        }
+
+        .save-button, .download-button {
+            background-color: #007bff;
+            color: white;
+            padding: 10px 15px;
+            margin-top: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            font-size: 16px;
+        }
+
+        .save-button:hover, .download-button:hover {
+            background-color: #0056b3;
+        }
+
+        .download-button {
+            display: none;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- Header with "My Notes" -->
+        <h1>My Notes</h1>
+
+        <div class="social-buttons">
+            <a href="#myCodes" class="social-button" id="myCodesLink" onclick="toggleSection('myCodes', this)">My Codes</a>
+            <a href="#viewCodes" class="social-button" id="viewCodesLink" onclick="toggleSection('viewCodes', this)">View Codes</a>
+        </div>
+
+        <!-- My Codes Section -->
+        <div id="myCodes" class="section">
+            <h2>My Codes</h2>
+            <textarea id="myCodesText" placeholder="Write your codes here..." rows="4"></textarea>
+            <button class="save-button" onclick="saveTextAndShowInViewCodes()">Save</button>
+        </div>
+
+        <!-- View Codes Section -->
+        <div id="viewCodes" class="section">
+            <h2>View Codes</h2>
+            <p id="viewCodesOutput">The content from "My Codes" will appear here.</p>
+            <button id="downloadButton" class="download-button" onclick="downloadAsPDF()">Download as PDF</button>
+        </div>
+    </div>
+
+    <script>
+        // Function to toggle sections and hide others
+        function toggleSection(sectionId, clickedLink) {
+            const sections = document.querySelectorAll('.section');
+            sections.forEach(section => {
+                if (section.id === sectionId) {
+                    section.style.display = section.style.display === 'none' || section.style.display === '' ? 'block' : 'none';
+                } else {
+                    section.style.display = 'none';
+                }
+            });
+
+            const links = document.querySelectorAll('.social-button');
+            links.forEach(link => {
+                link.classList.remove('active');
+            });
+
+            clickedLink.classList.add('active');
+        }
+
+        // Function to save "My Codes" text and show it in the "View Codes" section
+        function saveTextAndShowInViewCodes() {
+            const myCodesTextValue = document.getElementById('myCodesText').value;
+            document.getElementById('viewCodesOutput').textContent = myCodesTextValue;
+
+            if (myCodesTextValue.trim() !== '') {
+                document.getElementById('downloadButton').style.display = 'inline-block';
+            } else {
+                document.getElementById('downloadButton').style.display = 'none';
+            }
+
+            alert('Text saved successfully!');
+        }
+
+        // Function to download the "View Codes" content as PDF with multiple pages
+        function downloadAsPDF() {
+            const { jsPDF } = window.jspdf;
+            const doc = new jsPDF();
+            
+            const viewCodesContent = document.getElementById('viewCodesOutput').textContent;
+            
+            const pageWidth = 180;
+            const textLines = doc.splitTextToSize(viewCodesContent, pageWidth);
+            const lineHeight = 10;
+            let cursorY = 10;
+
+            textLines.forEach(line => {
+                if (cursorY + lineHeight > 280) {
+                    doc.addPage();
+                    cursorY = 10;
+                }
+                doc.text(line, 10, cursorY);
+                cursorY += lineHeight;
+            });
+            
+            doc.save('MyCodes.pdf');
+        }
+    </script>
+
+</body>
+</html>
