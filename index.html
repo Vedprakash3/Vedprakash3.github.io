@@ -3,303 +3,57 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hanuman Prayers</title>
+    <title>Welcome to My Projects Website</title>
     <style>
-        /* Basic styling for layout */
-        body {
-            font-family: Arial, sans-serif;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            background-color: #f5f5f5;
-            margin: 0;
+        body { 
+            font-family: Arial, sans-serif; 
+            text-align: center; 
+            padding: 50px; 
+            background-color: #FFFFE0; /* Light yellow background */
         }
-
-        .container {
-            background-color: #ffffff;
-            padding: 20px;
-            border-radius: 8px;
-            width: 90%;
-            max-width: 600px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        h1 { 
+            color: #333; 
+            position: relative; /* Enable positioning */
+            top: -40px; /* Move the heading slightly down */
+            font-size: 24px; /* Smaller font size */
         }
-
-        h1 {
-            text-align: center;
-            color: #d9534f;
+        p { 
+            margin-top: -10px; /* Move text closer to the h1 */
+            font-size: 16px; /* Original font size for the paragraph */
         }
-
-        .tabs {
-            display: flex;
-            justify-content: space-between;
-            gap: 10px;
-            margin-bottom: 20px;
-        }
-
-        .tab {
-            flex: 1; /* Make each tab take equal width */
-            text-align: center;
-            padding: 10px;
-            border: 1px solid #d9534f;
+        .btn {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;  /* Reduced padding */
+            font-size: 16px;  /* Font size for buttons */
+            margin: 10px;
+            border: none;
+            cursor: pointer;
             border-radius: 5px;
-            color: #d9534f;
-            transition: background-color 0.3s;
-            font-size: 1rem;
         }
-
-        .tab.active, .tab:hover {
-            background-color: #d9534f;
-            color: #ffffff;
+        .btn:hover {
+            background-color: #45a049;
         }
-
-        .content {
-            display: none;
-            line-height: 1.6;
-            color: #333333;
-        }
-
-        .content.active {
-            display: block;
+        .btn-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1>Hanuman Prayers</h1>
-        <div class="tabs">
-            <div class="tab active" onclick="showContent('chalisa')">Hanuman Chalisa</div>
-            <div class="tab" onclick="showContent('ashtak')">Hanuman Ashtak</div>
-            <div class="tab" onclick="showContent('bajrangbaan')">Bajrangbaan</div>
-        </div>
 
-        <div id="chalisa" class="content active">
-            <h2>Hanuman Chalisa</h2>
-            <p>
-                ॥ दोहा ॥<br>
-                श्रीगुरु चरन सरोज रज, निज मनु मुकुरु सुधारि ।<br>
-                बरनउँ रघुबर बिमल जसु, जो दायकु फल चारि ॥<br>
-                बुद्धिहीन तनु जानिके, सुमिरौं पवन-कुमार ।<br>
-                बल बुद्धि विद्या देहु मोहिं, हरहु कलेस विकार ॥<br><br>
-
-                ॥ चौपाई ॥<br>
-                जय हनुमान ज्ञान गुन सागर ।<br>
-                जय कपीस तिहुँ लोक उजागर ॥ 1 <br>
-                राम दूत अतुलित बल धामा ।<br>
-                अंजनि-पुत्र पवनसुत नामा ॥ 2 <br>
-                महाबीर बिक्रम बजरंगी । <Br>
-कुमति निवार सुमति के संगी ॥ 3 <Br>
-कंचन बरन बिराज सुबेसा । <Br>
-कानन कुण्डल कुंचित केसा ॥ 4 <Br>
-हाथ बज्र औ ध्वजा बिराजै । <Br>
-काँधे मूँज जनेऊ साजै ॥ 5 <Br>
-शंकर सुवन केसरी नंदन । <Br>
-तेज प्रताप महा जग वंदन ॥ 6 <Br>
-विद्यावान गुनी अति चातुर । <Br>
-राम काज करिबे को आतुर ॥ 7 <Br>
-प्रभु चरित्र सुनिबे को रसिया । <Br>
-राम लखन सीता मन बसिया ॥ 8 <Br>
-सूक्ष्म रूप धरि सियहिं दिखावा । <Br>
-विकट रूप धरि लंक जरावा ॥ 9 <Br>
-भीम रूप धरि असुर संहारे । <Br>
-रामचन्द्र के काज सँवारे ॥ 10 <Br>
-लाय सजीवन लखन जियाये । <Br>
-श्रीरघुबीर हरषि उर लाये ॥ 11 <Br>
-रघुपति कीन्ही बहुत बड़ाई । <Br>
-तुम मम प्रिय भरतहि सम भाई ॥ 12 <Br>
-सहस बदन तुम्हरो जस गावैं । <Br>
-अस कहि श्रीपति कंठ लगावैं ॥ 13 <Br>
-सनकादिक ब्रह्मादि मुनीसा । <Br>
-नारद सारद सहित अहीसा ॥ 14 <Br>
-जम कुबेर दिगपाल जहाँ ते । <Br>
-कवि कोविद कहि सके कहाँ ते ॥ 15 <Br>
-तुम उपकार सुग्रीवहिं कीन्हा । <Br>
-राम मिलाय राज पद दीन्हा ॥ 16 <Br>
-तुम्हरो मन्त्र विभीषण माना । <Br>
-लंकेस्वर भए सब जग जाना ॥ 17<Br>
-जुग सहस्र जोजन पर भानू । <Br>
-लील्यो ताहि मधुर फल जानू ॥ 18 <Br>
-प्रभु मुद्रिका मेलि मुख माहीं । <Br>
-जलधि लाँघि गये अचरज नाहीं ॥ 19 <Br>
-दुर्गम काज जगत के जेते । <Br>
-सुगम अनुग्रह तुम्हरे तेते ॥ 20 <Br>
-राम दुआरे तुम रखवारे । <Br>
-होत न आज्ञा बिनु पैसारे ॥ 21 <Br>
-सब सुख लहै तुम्हारी सरना । <Br>
-तुम रक्षक काहू को डरना ॥ 22 <Br>
-आपन तेज सम्हारो आपै । <Br>
-तीनों लोक हाँक ते काँपै ॥ 23 <Br>
-भूत पिशाच निकट नहिं आवै । <Br>
-महाबीर जब नाम सुनावै ॥ 24 <Br>
-नासै रोग हरै सब पीरा । <Br>
-जपत निरंतर हनुमत बीरा ॥ 25 <Br>
-संकट ते हनुमान छुड़ावै । <Br>
-मन क्रम बचन ध्यान जो लावै ॥ 26 <Br>
-सब पर राम तपस्वी राजा । <Br>
-तिन के काज सकल तुम साजा ॥ 27 <Br>
-और मनोरथ जो कोई लावै । <Br>
-सोई अमित जीवन फल पावै ॥ 28 <Br>
-चारों जुग परताप तुम्हारा । <Br>
-है परसिद्ध जगत उजियारा ॥ 29 <Br>
-साधु संत के तुम रखवारे । <Br>
-असुर निकंदन राम दुलारे ॥ 30 <Br>
-अष्ट सिद्धि नौ निधि के दाता । <Br>
-अस बर दीन जानकी माता ॥ 31 <Br>
-राम रसायन तुम्हरे पासा । <Br>
-सदा रहो रघुपति के दासा ॥ 32 <Br>
-तुम्हरे भजन राम को पावै । <Br>
-जनम जनम के दुख बिसरावै ॥ 33 <Br>
-अन्त काल रघुबर पुर जाई । <Br>
-जहाँ जन्म हरि-भक्त कहाई ॥ 34 <Br>
-और देवता चित्त न धरई । <Br>
-हनुमत सेइ सर्ब सुख करई ॥ 35 <Br>
-संकट कटै मिटै सब पीरा । <Br>
-जो सुमिरै हनुमत बलबीरा ॥ 36 <Br>
-जय जय जय हनुमान गोसाईं । <Br>
-कृपा करहु गुरुदेव की नाईं ॥ 37 <Br>
-जो सत बार पाठ कर कोई । <Br>
-छूटहि बंदि महा सुख होई ॥ 38 <Br>
-जो यह पढ़ै हनुमान चालीसा । <Br>
-होय सिद्धि साखी गौरीसा ॥ 39 <Br>
-तुलसीदास सदा हरि चेरा । <Br>
-कीजै नाथ हृदय महँ डेरा ॥ 40 <Br> <Br>
-
-॥ दोहा ॥ <Br>
-पवन तनय संकट हरन, मंगल मूरति रूप । <Br>
-राम लखन सीता सहित, हृदय बसहु सुर भूप ॥
-            </p>
-        </div>
-
-        <div id="ashtak" class="content">
-            <h2>Hanuman Ashtak</h2>
-            <p>
-                बाल समय रवि भक्षी लियो तब <br>
-तीनहुं लोक भयो अंधियारों <br>
-ताहि सों त्रास भयो जग को <br>
-यह संकट काहु सों जात न टारो <br>
-(देवन आनि करी बिनती तब) <br>
-(छाड़ी दियो रवि कष्ट निवारो) <br>
-को नहीं जानत है जग में कपि <br>
-(संकटमोचन नाम तिहारो, संकटमोचन नाम तिहारो) 1 <br>
-बालि की त्रास कपीस बसैं गिरि <br>
-जात महाप्रभु पंथ निहारो <br>
-चौंकि महामुनि साप दियो तब <br>
-चाहिए कौन बिचार बिचारो <br>
-(कैद्विज रूप लिवाय महाप्रभु) <br>
-(सो तुम दास के सोक निवारो) <br>
-को नहीं जानत है जग में कपि <br>
-(संकटमोचन नाम तिहारो, संकटमोचन नाम तिहारो) 2 <br>
-अंगद के संग लेन गए सिय <br>
-खोज कपीस यह बैन उचारो <br>
-जीवत न बचिहौ हम सो जु <br>
-बिना सुधि लाये इहाँ पगु धारो <br>
-(हेरी थके तट सिन्धु सबे तब) <br>
-(लाए सिया-सुधि प्राण उबारो) <br>
-को नहीं जानत है जग में कपि <br>
-(संकटमोचन नाम तिहारो, संकटमोचन नाम तिहारो) 3 <br>
-रावण त्रास दई सिय को सब <br>
-राक्षसी सों कही सोक निवारो <br>
-ताहि समय हनुमान महाप्रभु <br>
-जाए महा रजनीचर मारो <br>
-(चाहत सीय असोक सों आगि सु) <br>
-(दै प्रभुमुद्रिका सोक निवारो) <br>
-को नहीं जानत है जग में कपि <br>
-(संकटमोचन नाम तिहारो, संकटमोचन नाम तिहारो) 4 <br>
-बान लग्यो उर लछिमन के तब <br>
-प्राण तजे सुत रावण मारो <br>
-लै गृह बैद्य सुषेन समेत <br>
-तबै गिरि द्रोण सुबीर उपारो <br>
-(आनि सजीवन हाथ दई तब) <br>
-(लछिमन के तुम प्रान उबारो) <br>
-को नहीं जानत है जग में कपि <br>
-(संकटमोचन नाम तिहारो, संकटमोचन नाम तिहारो) 5 <br>
-रावन युद्ध अजान कियो तब <br>
-नाग कि फांस सबै सिर डारो <br>
-श्री रघुनाथ समेत सबै दल <br>
-मोह भयो यह संकट भारो <br>
-(आनि खगेस तबै हनुमान जु) <br>
-(बंधन काटि सुत्रास निवारो) <br>
-को नहीं जानत है जग में कपि <br>
-(संकटमोचन नाम तिहारो, संकटमोचन नाम तिहारो) 6 <br>
-बंधु समेत जबै अहिरावन <br>
-लै रघुनाथ पताल सिधारो <br>
-देबिन्हीं पूजि भली विधि सों बलि <br>
-देउ सबै मिलि मन्त्र विचारो <br>
-(जाये सहाए भयो तब ही) <br>
-(अहिरावन सैन्य समेत संहारो) <br>
-को नहीं जानत है जग में कपि <br>
-(संकटमोचन नाम तिहारो, संकटमोचन नाम तिहारो) 7 <br>
-काज किये बड़ देवन के तुम <br>
-बीर महाप्रभु देखि बिचारो <br>
-कौन सो संकट मोर गरीब को <br>
-जो तुमसो नहिं जात है टारो <br>
-(बेगि हरो हनुमान महाप्रभु) <br>
-(जो कछु संकट होए हमारो) <br>
-को नहीं जानत है जग में कपि <br>
-(संकटमोचन नाम तिहारो, संकटमोचन नाम तिहारो) 8 
-            </p>
-        </div>
-
-        <div id="bajrangbaan" class="content">
-            <h2>Bajrang Baan</h2>
-            <p>
-                ॥ दोहा ॥ <br>
-निश्चय प्रेम प्रतीति ते, बिनय करैं सनमान । <br>
-तेहि के कारज सकल शुभ, सिद्ध करैं हनुमान ॥ <br> <br>
-॥ चौपाई ॥<br>
-जय हनुमंत संत हितकारी, सुन लीजै प्रभु अरज हमारी । <br>
-जन के काज बिलंब न कीजै, आतुर दौरि महा सुख दीजै । <br>
-जैसे कूदि सिंधु महिपारा, सुरसा बदन पैठि बिस्तारा ।<br>
-आगे जाय लंकिनी रोका, मारेहु लात गई सुरलोका ।<br>
-जाय बिभीषन को सुख दीन्हा, सीता निरखि परमपद लीन्हा । <br>
-बाग उजारि सिंधु महँ बोरा, अति आतुर जमकातर तोरा । <br>
-अक्षय कुमार मारि संहारा, लूम लपेटि लंक को जारा । <br>
-लाह समान लंक जरि गई, जय-जय धुनि सुरपुर नभ भई । <br>
-अब बिलंब केहि कारन स्वामी, कृपा करहु उर अंतरयामी । <br>
-जय-जय लखन प्रान के दाता, आतुर ह्वै दुख करहु निपाता । <br>
-जय हनुमान जयति बल-सागर, सुर-समूह-समरथ भट-नागर । <br>
-ॐ हनु-हनु-हनु हनुमंत हठीले, बैरिहि मारु बज्र की कीले । <br>
-ॐ ह्नीं ह्नीं ह्नीं हनुमंत कपीसा, ॐ हुं हुं हुं हनु अरि उर सीसा । <br>
-जय अंजनि कुमार बलवंता, शंकरसुवन बीर हनुमंता । <br>
-बदन कराल काल-कुल-घालक, राम सहाय सदा प्रतिपालक । <br>
-भूत, प्रेत, पिसाच निसाच, र अगिन बेताल काल मारी मर । <br>
-इन्हें मारु, तोहि सपथ राम की, राखु नाथ मरजाद नाम की । <br>
-सत्य होहु हरि सपथ पाइ कै, राम दूत धरु मारु धाइ कै । <br>
-जय-जय-जय हनुमंत अगाधा, दुख पावत जन केहि अपराधा । <br>
-पूजा जप तप नेम अचारा, नहिं जानत कछु दास तुम्हारा । <br>
-बन उपबन मग गिरि गृह माहीं, तुम्हरे बल हौं डरपत नाहीं । <br>
-जनकसुता हरि दास कहावौ, ताकी सपथ बिलंब न लावौ । <br>
-जै जै जै धुनि होत अकासा, सुमिरत होय दुसह दुख नासा । <br>
-चरन पकरि, कर जोरि मनावौं, यहि औसर अब केहि गोहरावौं ।<br>
-उठु, उठु, चलु, तोहि राम दुहाई, पायँ परौं, कर जोरि मनाई । <br>
-ॐ चं चं चं चं चपल चलंता, ॐ हनु हनु हनु हनु हनुमंता ।<br>
-ॐ हं हं हाँक देत कपि चंचल, ॐ सं सं सहमि पराने खल-दल ।<br>
-अपने जन को तुरत उबारौ, सुमिरत होय आनंद हमारौ ।<br>
-यह बजरंग-बाण जेहि मारै, ताहि कहौ फिरि कवन उबारै । <br>
-पाठ करै बजरंग-बाण की, हनुमत रक्षा करै प्रान की । <br>
-यह बजरंग बाण जो जापैं, तासों भूत-प्रेत सब कापैं । <br>
-धूप देय जो जपै हमेसा, ताके तन नहिं रहै कलेसा ।<br><br>
-॥ दोहा ॥ <br>
-उर प्रतीति दृढ़, सरन ह्वै, पाठ करै धरि ध्यान । <br>
-बाधा सब हर, करैं सब काम सफल हनुमान ॥
-
-            </p>
-        </div>
+    <h1>Welcome to My Projects Website</h1>
+    <p>Explore my various projects by clicking on the links below:</p>
+    
+    <div class="btn-container">
+        <button class="btn" onclick="window.open('https://vedprakash3.github.io/', '_blank')">Vedprakash3-Official</button>
+        <button class="btn" onclick="window.open('https://vedprakash3.github.io/0.github.io/', '_blank')">Tic Tac Toe</button>
+        <button class="btn" onclick="window.open('https://vedprakash3.github.io/1.github.io/', '_blank')">Upload Photo on CV</button>
+        <button class="btn" onclick="window.open('https://vedprakash3.github.io/2.github.io/', '_blank')">Upload Photo on Form</button>
+        <button class="btn" onclick="window.open('https://vedprakash3.github.io/3.github.io/', '_blank')">My Notes</button>
+        <button class="btn" onclick="window.open('https://vedprakash3.github.io/4.github.io/', '_blank')">Hanuman Prayers</button>
     </div>
 
-    <script>
-        function showContent(contentId) {
-            const contents = document.querySelectorAll('.content');
-            const tabs = document.querySelectorAll('.tab');
-            
-            // Hide all content and remove 'active' class from tabs
-            contents.forEach(content => content.classList.remove('active'));
-            tabs.forEach(tab => tab.classList.remove('active'));
-            
-            // Show selected content and add 'active' class to clicked tab
-            document.getElementById(contentId).classList.add('active');
-            event.target.classList.add('active');
-        }
-    </script>
 </body>
 </html>
