@@ -11,12 +11,14 @@
             padding: 50px;
             background-color: #FFFFE0;
         }
+
         h1 {
             color: #333;
             position: relative;
             top: -40px;
             font-size: 24px;
         }
+
         p {
             margin-top: -10px;
             font-size: 16px;
@@ -41,7 +43,6 @@
             border: none;
             cursor: pointer;
             border-radius: 5px;
-            
         }
 
         .btn:hover {
@@ -53,53 +54,58 @@
             flex-direction: column;
             align-items: center;
         }
+
     </style>
 </head>
 <body>
 
-<h1>Welcome to My Projects</h1>
-<p>Explore my various projects by clicking on the links below:</p>
+    <h1>Welcome to My Projects</h1>
+    <p>Explore my various projects by clicking on the links below:</p>
 
-<!-- Search Bar -->
-<input type="text" id="searchBar" placeholder="Search projects..." onkeyup="searchProjects()">
+    <!-- My App and Resume Button -->
+    <button class="btn" onclick="window.open('https://vedprakash3.github.io/App-CV_/', '_blank')"> ⬇️ My App and Resume </button>
 
-<div class="btn-container" id="projectList">
-    <button class="btn" onclick="window.open('https://vedprakash3.github.io/Game_-Projects/', '_blank')">Games</button>
-    <button class="btn" onclick="window.open('https://vedprakash3.github.io/Image-Tools.github.io/', '_blank')">Image Tools</button>
-    <button class="btn" onclick="window.open('https://vedprakash3.github.io/Text-Tools.github.io/', '_blank')">Text Tools</button>
-    <button class="btn" onclick="window.open('https://vedprakash3.github.io/Hanuman-Prayers.github.io/', '_blank')">Hanuman Prayers</button>
-    <button class="btn" onclick="window.open('https://vedprakash3.github.io/Learn_-English/', '_blank')">Learn English</button>
-    <button class="btn" onclick="window.open('https://vedprakash3.github.io/Calculator.github.io/', '_blank')">Calculator</button>
-    <button class="btn" onclick="window.open('https://vedprakash3.github.io/Code-In-Animation.github.io/', '_blank')">Code In Animation</button>
-    <button class="btn" onclick="window.open('https://vedprakash3.github.io/Ank_Jyotish.github.io/', '_blank')">Ank Jyotish</button>
-    <button class="btn" onclick="window.open('https://vedprakash3.github.io/Motorcycle_Troubleshooting.io/', '_blank')">Motorcycle 🔧</button>
-    <button class="btn" onclick="window.open('https://vedprakash3.github.io/Colorful_Disclaimer.io/', '_blank')">Colorful Disclaimer</button>
-    <button class="btn" onclick="window.open('https://vedprakash3.github.io/Flag.io/', '_blank')">Flag</button>
-    <button class="btn" onclick="window.open('https://vedprakash3.github.io/Planets.io/', '_blank')">Planets</button>
-    <button class="btn" onclick="window.open('https://vedprakash3.github.io/Engagement_Invitation.io/', '_blank')">Engagement Invitation</button>
-    <button class="btn" onclick="window.open('https://vedprakash3.github.io/Wedding-_Invitation.io/', '_blank')">Wedding Invitation</button>
-    <button class="btn" onclick="window.open('https://vedprakash3.github.io/Business-_Card.io/', '_blank')">Business Card</button>
-    <button class="btn" onclick="window.open('https://vedprakash3.github.io/Personal-Visiting-_Card.io/', '_blank')">Personal Visiting Card</button>
-    <button class="btn" onclick="window.open('https://vedprakash3.github.io/Company_Website.io/', '_blank')">Company Website</button>
-    <button class="btn" onclick="window.open('https://vedprakash3.github.io/Graph.io/', '_blank')">Data Graph</button>
-     <button class="btn" onclick="window.open('https://vedprakash3.github.io/IP_Camera-Troubleshooting_Guide/', '_blank')">IP Camera 🔧</button>
-</div>
+    <!-- Search Bar -->
+    <input type="text" id="searchBar" placeholder="Search projects..." onkeyup="searchProjects()">
 
-<script>
-    function searchProjects() {
-        let input = document.getElementById("searchBar").value.toLowerCase();
-        let buttons = document.getElementById("projectList").getElementsByTagName("button");
+    <div class="btn-container" id="projectList">
+        <button class="btn" onclick="window.open('https://vedprakash3.github.io/Game_-Projects/', '_blank')">Games</button>
+        <button class="btn" onclick="window.open('https://vedprakash3.github.io/Image-Tools.github.io/', '_blank')">Image Tools</button>
+        <button class="btn" onclick="window.open('https://vedprakash3.github.io/Text-Tools.github.io/', '_blank')">Text Tools</button>
+        <button class="btn" onclick="window.open('https://vedprakash3.github.io/Hanuman-Prayers.github.io/', '_blank')">Hanuman Prayers</button>
+        <button class="btn" onclick="window.open('https://vedprakash3.github.io/Learn_-English/', '_blank')">Learn English</button>
+        <button class="btn" onclick="window.open('https://vedprakash3.github.io/Calculator.github.io/', '_blank')">Calculator</button>
+        <button class="btn" onclick="window.open('https://vedprakash3.github.io/Code-In-Animation.github.io/', '_blank')">Code In Animation</button>
+        <button class="btn" onclick="window.open('https://vedprakash3.github.io/Ank_Jyotish.github.io/', '_blank')">Ank Jyotish</button>
+        <button class="btn" onclick="window.open('https://vedprakash3.github.io/Motorcycle_Troubleshooting.io/', '_blank')">Motorcycle 🔧</button>
+        <button class="btn" onclick="window.open('https://vedprakash3.github.io/Colorful_Disclaimer.io/', '_blank')">Colorful Disclaimer</button>
+        <button class="btn" onclick="window.open('https://vedprakash3.github.io/Flag.io/', '_blank')">Flag</button>
+        <button class="btn" onclick="window.open('https://vedprakash3.github.io/Planets.io/', '_blank')">Planets</button>
+        <button class="btn" onclick="window.open('https://vedprakash3.github.io/Engagement_Invitation.io/', '_blank')">Engagement Invitation</button>
+        <button class="btn" onclick="window.open('https://vedprakash3.github.io/Wedding-_Invitation.io/', '_blank')">Wedding Invitation</button>
+        <button class="btn" onclick="window.open('https://vedprakash3.github.io/Business-_Card.io/', '_blank')">Business Card</button>
+        <button class="btn" onclick="window.open('https://vedprakash3.github.io/Personal-Visiting-_Card.io/', '_blank')">Personal Visiting Card</button>
+        <button class="btn" onclick="window.open('https://vedprakash3.github.io/Company_Website.io/', '_blank')">Company Website</button>
+        <button class="btn" onclick="window.open('https://vedprakash3.github.io/Graph.io/', '_blank')">Data Graph</button>
+        <button class="btn" onclick="window.open('https://vedprakash3.github.io/IP_Camera-Troubleshooting_Guide/', '_blank')">IP Camera 🔧</button>
+    </div>
 
-        for (let i = 0; i < buttons.length; i++) {
-            let text = buttons[i].innerText.toLowerCase();
-            if (text.includes(input)) {
-                buttons[i].style.display = "block";
-            } else {
-                buttons[i].style.display = "none";
+    <script>
+        function searchProjects() {
+            let input = document.getElementById("searchBar").value.toLowerCase();
+            let buttons = document.getElementById("projectList").getElementsByTagName("button");
+
+            for (let i = 0; i < buttons.length; i++) {
+                let text = buttons[i].innerText.toLowerCase();
+
+                if (text.includes(input)) {
+                    buttons[i].style.display = "block";
+                } else {
+                    buttons[i].style.display = "none";
+                }
             }
         }
-    }
-</script>
+    </script>
 
 </body>
 </html>
